@@ -1,0 +1,56 @@
+*Something with setting the path to results file:
+
+src/solvers/GMAA-ICE problems/dectiger.dpomdp -h2
+GMAA-ICE (JAIR 2013) using a BGIP-BnB solver and a INVALIDQHEUR heuristic
+GMAA Planner initialized
+ERROR: mkdir error for /cluster/home/bbraulio/.madp/results/GMAA/dectiger
+Results will not be stored to disk.
+
+*Results of example_BFS DT -h2 -v:
+value=8
+JointPolicyPureVector:
+JPolComponent_VectorImplementation index 0
+Policy for agent 0 (index 0):
+Oempty,  --> a00:Listen
+Oempty, o00:HearLeft,  --> a00:Listen
+Oempty, o01:HearRight,  --> a00:Listen
+Policy for agent 1 (index 0):
+Oempty,  --> a10:Listen
+Oempty, o10:HearLeft,  --> a10:Listen
+Oempty, o11:HearRight,  --> a10:Listen
+
+*Results of src/solvers/GMAA-ICE problems/dectiger.dpomdp -h2 :
+===================== GMAA run 1/1 starting
+GMAA::Plan GMAA ENDED
+Expanded nodes at different stages:
+< 9, 1 >
+Maximum number of nodes that could have been expanded:
+< 81, 99 >
+
+value=-4
+OptimalValueDatabase: entry 'dectiger 1 2'
+OptimalValueDatabase: Optimal value unknown.
+ERROR: OptimalValueDatabase::Save() failed to open file /cluster/home/bbraulio/.madp/results/GMAA/optimalValueDatabase
+
+Running Simulation to determine control quality...
+Sampled value = -4 (computed was -4)
+
+Cluster statistics:
+Number of joint types after clustering in each BG.
+timestep compressionRatio averageAfterClustering sizeWithoutClustering <all entries>
+1 2 2 4 < 4, 1, 1 >
+
+===================== GMAA run 1/1 ended, Dec-POMDP value=-4
+
+Summary of timing results:
+ComputeQ: 0 s in 1 measurements, max 0, avg 0, min 0
+Overall: 0.07 s in 1 measurements, max 0.07, avg 0.07, min 0.07
+Plan: 0 s in 1 measurements, max 0, avg 0, min 0
+PlanningUnit: 0 s in 1 measurements, max 0, avg 0, min 0
+Simulation: 0.06 s in 1 measurements, max 0.06, avg 0.06, min 0.06
+GMAA::Plan: 0 s in 1 measurements, max 0, avg 0, min 0
+GMAA::Plan::iteration: 0 s in 12 measurements, max 0, avg 0, min 0
+GMAA_MAAstarCluster::BGCluster_ts001: 0 s in 3 measurements, max 0, avg 0, min 0
+GMAA_MAAstarCluster::NextExact_ts000: 0 s in 9 measurements, max 0, avg 0, min 0
+GMAA_MAAstarCluster::NextExact_ts001: 0 s in 3 measurements, max 0, avg 0, min 0
+evaluateRandomPolicy sampled value: -93.045
